@@ -36,8 +36,8 @@ class BarcodeSelectorAdapter(
         mTasks.flushTaskList(TaskHandler.TYPE.BARCODE, true, false, false)
     }
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        var convertView = convertView
+    override fun getView(position: Int, view: View?, parent: ViewGroup): View {
+        var convertView = view
         val catimaBarcodeWithValue = getItem(position)
         val catimaBarcode = catimaBarcodeWithValue!!.catimaBarcode()
         val value = catimaBarcodeWithValue.value()
